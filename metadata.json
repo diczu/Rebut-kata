@@ -1,0 +1,6 @@
+{
+  "name": "Rebut Kata PPU",
+  "description": "Game kelas interaktif untuk pembelajaran Pembentukan Kata (UTBK-SNBT PPU) siswa SMA kelas 12.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body {
+    font-family: "Poppins", "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f2fafb;
+    color: #1e2428;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.font-mono-num {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  18% { transform: translateX(-10px); }
+  36% { transform: translateX(9px); }
+  54% { transform: translateX(-6px); }
+  72% { transform: translateX(5px); }
+  90% { transform: translateX(-2px); }
+}
+
+.animate-shake {
+  animation: shake 0.42s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes timer-urgent {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+}
+
+.animate-timer-urgent {
+  animation: timer-urgent 0.55s ease-in-out infinite;
+}
+
+@keyframes star-burst {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.5) rotate(0deg);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(calc(var(--tx) * 0.35), calc(var(--ty) * 0.35)) scale(1.2) rotate(20deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx), var(--ty)) scale(0.8) rotate(90deg);
+  }
+}
+
+.animate-star-burst {
+  animation: star-burst 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-shake,
+  .animate-timer-urgent,
+  .animate-star-burst {
+    animation: none !important;
+  }
+}
